@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt.md - Calculatoare de Datorii</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet"> 
+    <style>
+        :root {
+            --logo-width: 338px;
+            --logo-height: 91px;
+            --text-color: #494949;
+            --divider-color: #d3d3d3;
+            --border-radius: 10px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --card-border-color: #d3d3d3;
+            --primary-color: #4a90e2;
+            --secondary-color: #e5eaf5;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f7ff;
+            color: var(--text-color);
+            margin: 0;
+            padding-top: 90px;
+        }
+
+        .header {
+            width: 100%;
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            background-color: #ffffff;
+            box-shadow: var(--box-shadow);
+            z-index: 1000;
+            height: 80px;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo a {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            text-decoration: none;
+        }
+
+        .logo a:hover {
+            opacity: 0.9;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            height: 100%;
+            align-items: center;
+            margin-left: 10px;
+            margin-right: auto;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: var(--secondary-color);
+            border-radius: var(--border-radius);
+        }
+
+        .calculator-card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1300px;
+            margin: 20px auto;
+            padding-top: 20px;
+        }
+
+        .calculator-card {
+            height: 94px;
+            border-radius: var(--border-radius);
+            background-color: #ffffff;
+            border: 1px solid var(--card-border-color);
+            box-shadow: var(--box-shadow);
+            padding: 7.5px 15px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+        }
+
+        .calculator-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .calculator-title {
+            font-size: 16px;
+            color: #000000;
+            margin-bottom: 0;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+        }
+
+        .chevron-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            fill: var(--primary-color);
+        }
+
+        .calculator-card:hover .chevron-icon {
+            fill: var(--primary-color);
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            gap: 15px;
+        }
+
+        .social-icons img:hover {
+            filter: brightness(1.5);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="picture_library/New_logo.svg" alt="Logo" style="width: var(--logo-width); height: var(--logo-height);">
+            </a>
+        </div>
+        <nav class="nav" style="flex: 1;">
+            <a href="#">Calculatoare <span class="chevron" style="margin-left: 5px;" aria-hidden="true">▼</span></a>
+            <a href="#">Licitație a datoriilor <span class="chevron" style="margin-left: 5px;" aria-hidden="true">▼</span></a>
+            <a href="#">Rating <span class="chevron" style="margin-left: 5px;" aria-hidden="true">▼</span></a>
+            <a href="#">Analitica <span class="chevron" style="margin-left: 5px;" aria-hidden="true">▼</span></a>
+        </nav>
+        <div class="social-icons">
+            <a href="https://telegram.org" target="_blank">
+                <img src="picture_library/Telegram.svg" alt="Telegram Icon" style="width: 30px; height: 30px;">
+            </a>
+            <a href="https://facebook.com" target="_blank">
+                <img src="picture_library/facebook.svg" alt="Facebook Icon" style="width: 30px; height: 30px;">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="picture_library/linkedin.svg" alt="LinkedIn Icon" style="width: 30px; height: 30px;">
+            </a>
+            <a href="https://support.com" target="_blank">
+                <img src="picture_library/Support.svg" alt="Support Icon" style="width: 30px; height: 30px;">
+            </a>
+        </div>
+    </header>
+
+    <div class="calculator-card-container">
+        <a href="Dobânda_de_întârziere.html" class="calculator-card" target="_blank">
+            <div class="calculator-title">
+                <img src="picture_library/Dobânda_de_întârziere.svg" alt="Dobânda de întârziere Icon" style="width: 30px; height: 30px; margin-right: 10px;">
+                Dobânda de întârziere
+            </div>
+            <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </a>
+        <a href="penalitate.html" class="calculator-card" target="_blank">
+            <div class="calculator-title">
+                <img src="picture_library/penalitate.svg" alt="Penalitate Icon" style="width: 30px; height: 30px; margin-right: 10px;">
+                Penalitate
+            </div>
+            <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </a>
+        <a href="zile.html" class="calculator-card" target="_blank">
+            <div class="calculator-title">
+                <img src="picture_library/Zile.svg" alt="Zile Icon" style="width: 30px; height: 30px; margin-right: 10px;">
+                Zile
+            </div>
+            <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </a>
+        <a href="inflatie.html" class="calculator-card" target="_blank">
+            <div class="calculator-title">
+                <img src="picture_library/Inflatie.svg" alt="Inflatie Icon" style="width: 30px; height: 30px; margin-right: 10px;">
+                Inflație
+            </div>
+            <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </a>
+        <a href="depozit.html" class="calculator-card" target="_blank">
+            <div class="calculator-title">
+                <img src="picture_library/Depozit.svg" alt="Depozit Icon" style="width: 30px; height: 30px; margin-right: 10px;">
+                Depozit
+            </div>
+            <svg class="chevron-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </a>
+    </div>
+</body>
+</html>
